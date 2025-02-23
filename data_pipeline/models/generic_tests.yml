@@ -1,0 +1,40 @@
+version: 2
+
+models:
+  - name: stg_unique_actions
+    columns:
+      - name: GAME_ID
+        tests:
+          - not_null
+      - name: ACTIONNUMBER
+        tests:
+          - not_null
+      - name: SCOREHOME
+        tests:
+          - not_null
+      - name: SCOREAWAY
+        tests:
+          - not_null
+      - name: TIME_LEFT
+        tests:
+          - not_null
+      - name: HOME_RESULT
+        tests:
+          - not_null
+
+  - name: mart_point_diff_win
+    columns:
+      - name: GAME_ID
+        tests:
+          - not_null
+      - name: ACTIONNUMBER
+        tests:
+          - not_null
+      - name: point_diff
+        tests:
+          - not_null
+      - name: win
+        tests:
+          - not_null
+          - accepted_values:
+              values: [0, 1]

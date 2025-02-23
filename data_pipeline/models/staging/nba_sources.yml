@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: maddata_db
+    database: maddata_db
+    schema: md_schema
+    tables:
+      - name: nba_raw_data
+      - name: nba_live_data
